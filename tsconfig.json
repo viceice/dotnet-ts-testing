@@ -1,0 +1,9 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "module": "CommonJS",
+        "strict": false,
+        "lib": ["ES2015"],
+        "isolatedModules": true
+    }
+}
