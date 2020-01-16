@@ -6,6 +6,10 @@
   "author": "Michael Kriese <michael.kriese@visualon.de>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "webpack && tsc -p tests",
+    "tests": "tsc -p tests/tsconfig.json"
+  },
   "devDependencies": {
     "@babel/core": "7.8.3",
     "@babel/preset-env": "7.8.3",

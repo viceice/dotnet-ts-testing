@@ -11,7 +11,9 @@ export function transform(input: string, config: object, fileName: string) {
       target: ts.ScriptTarget.ES5,
       module: ts.ModuleKind.CommonJS,
       isolatedModules: true,
-      types: []
+      esModuleInterop: true,
+      types: [],
+      lib: ["ES2015"]
     },
     reportDiagnostics: true
   };

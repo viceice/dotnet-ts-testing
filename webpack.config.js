@@ -4,21 +4,21 @@ module.exports = [
   {
     entry: {
       // babel: "./scripts/babel.ts",
-      tsc: "./scripts/tsc.ts"
+      tsc: "./scripts/tsc.ts",
     },
     output: {
       filename: "[name].js",
       path: path.resolve(__dirname, "scripts/"),
-      library: "[name]"
-      // libraryTarget: "umd"
+      library: "[name]",
+      libraryTarget: "umd",
     },
     mode: "development",
     devtool: "none",
     node: {
-      fs: "empty"
+      fs: "empty",
     },
     performance: {
-      hints: false
+      hints: false,
     },
     module: {
       rules: [
@@ -27,13 +27,13 @@ module.exports = [
           use: {
             loader: "babel-loader",
             options: {
-              presets: [["@babel/preset-env", {}], "@babel/preset-typescript"]
-            }
-          }
-        }
-      ]
-    }
-  }
+              presets: [["@babel/preset-env", {}], "@babel/preset-typescript"],
+            },
+          },
+        },
+      ],
+    },
+  },
   // {
   // 	entry: {
   // 		babel: './Resources/babel.ts',
