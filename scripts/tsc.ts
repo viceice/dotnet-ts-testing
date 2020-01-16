@@ -3,6 +3,7 @@ import ts from "typescript";
 log(`typescript v${ts.version}`)
 
 export function transform(input: string, config: object, fileName: string) {
+  log("compiling");
   fileName = fileName || "dummy.ts";
   const transpileOptions: ts.TranspileOptions = {
     fileName,
@@ -15,7 +16,7 @@ export function transform(input: string, config: object, fileName: string) {
       types: [],
       lib: ["ES2015"]
     },
-    reportDiagnostics: true
+    reportDiagnostics: false
   };
 
   try {

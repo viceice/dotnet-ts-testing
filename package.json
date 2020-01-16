@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "build": "webpack && tsc -p tests",
-    "tests": "tsc -p tests/tsconfig.json"
+    "build:tests": "tsc -p tests",
+    "test": "yarn -s build && dotnet run"
   },
   "devDependencies": {
     "@babel/core": "7.8.3",

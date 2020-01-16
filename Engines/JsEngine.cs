@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace dotnet_ts_testing.Engines
@@ -27,18 +28,19 @@ namespace dotnet_ts_testing.Engines
             PrintLine();
             try
             {
+                var start = Stopwatch.StartNew();
                 var actual = Compile(code);
 
                 PrintLine();
 
                 if (actual != expected)
                 {
-                    Console.Error.WriteLine($"[{Engine}] Test {test} failed");
+                    Console.Error.WriteLine($"[{Engine}] Test {test} failed in {start.Elapsed}");
                     PrintLine();
                     Console.WriteLine(actual);
                 }
                 else
-                    Console.WriteLine($"[{Engine}] Test {test} succeeded");
+                    Console.WriteLine($"[{Engine}] Test {test} succeeded in {start.Elapsed}");
             }
             catch (Exception ex)
             {

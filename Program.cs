@@ -9,7 +9,7 @@ namespace dotnet_ts_testing
         {
             Console.WriteLine("dotnet ts converter");
             var type = "tsc";
-            var engines = new IJsEngine[] { new JintJsEngine(), new JurassicJsEngine(), new V8JsEngine(), new ChakraJsEngine() };
+            var engines = new IJsEngine[] { /*new JintJsEngine(), new JurassicJsEngine(),*/ new V8JsEngine(), new ChakraJsEngine(), new NilJsEngine() };
 
             foreach (var e in engines)
             {
