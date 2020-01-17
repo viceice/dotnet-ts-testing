@@ -7,10 +7,11 @@ namespace dotnet_ts_testing.Engines
     abstract class JsEngine : IJsEngine
     {
         public string Type { get; set; } = "tsc";
+        public bool Minimize { get; set; } = false;
 
         protected abstract string Engine { get; }
 
-        protected string Compiler => Read($"scripts/{Type}.js");
+        protected string Compiler => Read($"scripts/{Type}{(Minimize ? ".min" : string.Empty)}.js");
 
 
         protected abstract string Compile(string code);

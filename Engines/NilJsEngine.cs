@@ -18,9 +18,8 @@ namespace dotnet_ts_testing.Engines
             //engine.DebuggerCallback += Engine_DebuggerCallback;
             engine.DefineVariable("log").Assign(JSValue.Marshal(new Action<object>(Console.WriteLine)));
 
-            _code += "var window = this;\n";
             _code += Compiler;
-            _code += $"\nvar transform = function transform(c){{ return window.{Type}.transform(c);}};\n";
+            _code += $"\nvar transform = function transform(c){{ return {Type}.transform(c);}};\n";
             engine.Eval(_code, false);
 
             var compiler = engine.GetVariable("transform").As<Function>();

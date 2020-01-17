@@ -12,7 +12,7 @@
         <PackageReference Include="Jint" Version="3.0.0-beta-1632" />
         <PackageReference Include="Jurassic" Version="3.0.0" />
         <PackageReference Include="Microsoft.ClearScript" Version="6.0.0" />
-        <PackageReference Include="NiL.JS.NetCore" Version="2.5.1388" />
+        <PackageReference Include="NiL.JS.NetCore" Version="2.5.1403" />
     </ItemGroup>
 
     <ItemGroup>
@@ -20,6 +20,9 @@
         <None Update="scripts/*.js;tests/*.*" CopyToOutputDirectory="PreserveNewest" />
 
         <None Update="**/*.dll" Visible="false" />
+
+        <None Update="node_modules/typescript/lib/typescript.js" Link="scripts/typescript.js" CopyToOutputDirectory="PreserveNewest">
+        </None>
 
     </ItemGroup>
     
