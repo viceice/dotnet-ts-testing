@@ -4,6 +4,7 @@ using DiffPlex.DiffBuilder.Model;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace dotnet_ts_testing.Engines
 {
@@ -13,6 +14,8 @@ namespace dotnet_ts_testing.Engines
         public bool Minimize { get; set; } = false;
 
         protected abstract string Engine { get; }
+
+        protected virtual bool NonWindows => true;
 
         protected string Compiler => Read($"scripts/{Type}{(Minimize ? ".min" : string.Empty)}.js");
 
@@ -30,6 +33,13 @@ namespace dotnet_ts_testing.Engines
 
             Console.WriteLine($"[{Engine}] Test {test} started ...");
             PrintLine();
+
+            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && !NonWindows)
+            {
+                Console.WriteLine($"[{Engine}] not supported on platform: {RuntimeInformation.OSDescription}");
+                PrintLine();
+                return;
+            }
             try
             {
                 var start = Stopwatch.StartNew();
