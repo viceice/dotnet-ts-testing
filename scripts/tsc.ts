@@ -14,7 +14,8 @@ export function transform(input: string, config: object, fileName: string) {
       isolatedModules: true,
       esModuleInterop: true,
       types: [],
-      lib: ["ES2015"]
+      lib: ["ES2015"],
+      newLine: ts.NewLineKind.LineFeed
     },
     reportDiagnostics: false
   };
@@ -27,7 +28,7 @@ export function transform(input: string, config: object, fileName: string) {
         log(`[${ts.DiagnosticCategory[d.category]}]${d.file.fileName}:${d.file.getLineAndCharacterOfPosition(d.start).line}: ${d.messageText} (${d.code})`);
       }
       }
-      return res.outputText.replace(/\r\n/g, '\n');
+      return res.outputText;
   } catch (ex) {
     // Parsing stack is extremely long and not very useful, so just rethrow the message.
     throw new Error(ex.message);
