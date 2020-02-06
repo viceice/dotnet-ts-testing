@@ -29,7 +29,7 @@ namespace dotnet_ts_testing.Engines
 
         public void Test(string test)
         {
-            var expected = Read($"tests/{test}.js"); //.Replace("\r\n", "\n");
+            var expected = Read($"tests/{test}.js");
             var code = Read($"tests/{test}.ts");
 
             Console.WriteLine($"[{Engine}] Test {test} started ...");
@@ -44,7 +44,7 @@ namespace dotnet_ts_testing.Engines
             try
             {
                 var start = Stopwatch.StartNew();
-                var actual = Compile(code); //?.Replace("\r\n", "\n");
+                var actual = Compile(code);
 
                 PrintLine();
 

@@ -26,8 +26,8 @@ export function transform(input: string, config: object, fileName: string) {
       for (var d of res.diagnostics) {
         log(`[${ts.DiagnosticCategory[d.category]}]${d.file.fileName}:${d.file.getLineAndCharacterOfPosition(d.start).line}: ${d.messageText} (${d.code})`);
       }
-    }
-    return res.outputText;
+      }
+      return res.outputText.replace(/\r\n/g, '\n');
   } catch (ex) {
     // Parsing stack is extremely long and not very useful, so just rethrow the message.
     throw new Error(ex.message);
