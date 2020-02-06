@@ -1,4 +1,5 @@
 ﻿using DiffPlex;
+using DiffPlex.Chunkers;
 using DiffPlex.DiffBuilder;
 using DiffPlex.DiffBuilder.Model;
 using System;
@@ -28,7 +29,7 @@ namespace dotnet_ts_testing.Engines
 
         public void Test(string test)
         {
-            var expected = Read($"tests/{test}.js");
+            var expected = Read($"tests/{test}.js"); //.Replace("\r\n", "\n");
             var code = Read($"tests/{test}.ts");
 
             Console.WriteLine($"[{Engine}] Test {test} started ...");
@@ -43,7 +44,7 @@ namespace dotnet_ts_testing.Engines
             try
             {
                 var start = Stopwatch.StartNew();
-                var actual = Compile(code);
+                var actual = Compile(code); //?.Replace("\r\n", "\n");
 
                 PrintLine();
 
@@ -67,7 +68,7 @@ namespace dotnet_ts_testing.Engines
         private static void PrintDiff(string expected, string actual)
         {
             var diffBuilder = new InlineDiffBuilder(new Differ());
-            var diff = diffBuilder.BuildDiffModel(expected, actual);
+            var diff = diffBuilder.BuildDiffModel(expected, actual, false, false, new LineEndingsPreservingChunker());
 
             foreach (var line in diff.Lines)
             {
@@ -81,13 +82,21 @@ namespace dotnet_ts_testing.Engines
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("- ");
                         break;
+                    case ChangeType.Imaginary:
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.Write("* ");
+                        break;
+                    case ChangeType.Modified:
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("* ");
+                        break;
                     default:
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("  ");
                         break;
                 }
 
-                Console.WriteLine(line.Text);
+                Console.WriteLine(line.Text.Replace("\n", "\\n").Replace("\r", "\\r"));
             }
 
             Console.ResetColor();
