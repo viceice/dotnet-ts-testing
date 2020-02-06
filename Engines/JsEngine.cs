@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DiffPlex;
+using DiffPlex.DiffBuilder;
+using DiffPlex.DiffBuilder.Model;
+using System;
 using System.Diagnostics;
 using System.IO;
 
@@ -38,7 +41,7 @@ namespace dotnet_ts_testing.Engines
                 {
                     Console.Error.WriteLine($"[{Engine}] Test {test} failed in {start.Elapsed}");
                     PrintLine();
-                    Console.WriteLine(actual);
+                    PrintDiff(expected, actual);
                 }
                 else
                     Console.WriteLine($"[{Engine}] Test {test} succeeded in {start.Elapsed}");
@@ -49,6 +52,35 @@ namespace dotnet_ts_testing.Engines
                 Console.Error.WriteLine($"[{Engine}] Test {test} failed\n{ex}");
             }
             PrintLine();
+        }
+
+        private static void PrintDiff(string expected, string actual)
+        {
+            var diffBuilder = new InlineDiffBuilder(new Differ());
+            var diff = diffBuilder.BuildDiffModel(expected, actual);
+
+            foreach (var line in diff.Lines)
+            {
+                switch (line.Type)
+                {
+                    case ChangeType.Inserted:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("+ ");
+                        break;
+                    case ChangeType.Deleted:
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("- ");
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("  ");
+                        break;
+                }
+
+                Console.WriteLine(line.Text);
+            }
+
+            Console.ResetColor();
         }
 
         private static void PrintLine()
