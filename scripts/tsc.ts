@@ -9,8 +9,8 @@ export function transform(input: string, config: object, fileName: string) {
     fileName,
     compilerOptions: {
       ...config,
-      target: ts.ScriptTarget.ES5,
-      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES2015,
+      module: ts.ModuleKind.ES2015,
       isolatedModules: true,
       esModuleInterop: true,
       types: [],
@@ -33,3 +33,6 @@ export function transform(input: string, config: object, fileName: string) {
     throw new Error(ex.message);
   }
 }
+
+
+export default transform;

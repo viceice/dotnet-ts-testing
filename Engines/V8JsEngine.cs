@@ -13,10 +13,11 @@ namespace dotnet_ts_testing.Engines
             {
                 engine.AddHostObject("log", new Action<object>(Console.WriteLine));
                 engine.Execute("const window = this;");
+                engine.Execute("const exports = {};");
 
                 engine.Execute(Compiler);
 
-                return engine.Script[Type].transform(code);
+                return engine.Script.transform(code);
             }
         }
     }

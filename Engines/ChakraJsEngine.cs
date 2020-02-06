@@ -13,12 +13,14 @@ namespace dotnet_ts_testing.Engines
             {
                 engine.EmbedHostObject("log", new Action<object>(Console.WriteLine));
                 engine.Execute("const window = this;");
+                engine.Execute("const exports = {};");
 
                 engine.Execute(Compiler);
 
-                engine.Evaluate($"function transform(code){{ return {Type}.transform(code); }}");
-
-                return engine.CallFunction<string>("transform", code);
+                var res = engine.CallFunction("transform", code);
+                if (res is string s)
+                    return s;
+                throw new InvalidOperationException("Wrong result: " + res?.GetType());
             }
         }
     }

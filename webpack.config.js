@@ -12,7 +12,7 @@ function base(args) {
         filename: "[name].js",
         path: path.resolve(__dirname, "scripts/"),
         library: "[name]",
-        libraryTarget: "var",
+        libraryTarget: "commonjs2",
       },
       devtool: "none",
       node: {

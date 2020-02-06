@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "ES5",
+    "target": "ES2015",
     "strict": false,
     "lib": ["ES2015"],
     "isolatedModules": true,

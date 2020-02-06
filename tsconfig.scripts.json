@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "ES5",
+    "strict": false,
+    "types": [],
+    "isolatedModules": true,
+    "esModuleInterop": true
+  },
+  "files": ["scripts/tsc.ts"],
+  "include": ["scripts/**/*.d.ts"]
+}
