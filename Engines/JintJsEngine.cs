@@ -1,28 +1,29 @@
 ﻿using Jint;
+using Jint.Native;
 using System;
 
 namespace dotnet_ts_testing.Engines
 {
     class JintJsEngine : JsEngine
     {
+        private Engine _engine;
+        private JsValue _compiler;
+
         protected override string Engine => "Jint";
 
 
-        protected override string Compile(string code)
+        protected override string Compile(string code) => _compiler.Invoke(code).AsString();
+
+        protected override void Prepare()
         {
-            var engine = new Engine(c => c.DebugMode(false))
+            _engine = new Engine(c => c.DebugMode(false))
                             .SetValue("log", new Action<object>(Console.WriteLine));
-            engine.Global.FastAddProperty("window", engine.Global, false, false, false);
-            engine.Global.FastAddProperty("exports", engine.Global, false, false, false);
+            _engine.Global.FastAddProperty("window", _engine.Global, false, false, false);
+            _engine.Global.FastAddProperty("exports", _engine.Global, false, false, false);
 
-            engine.Execute(Compiler);
+            _engine.Execute(Compiler);
 
-            var res = engine.Global.Get("transform").Invoke(code);
-            if (res.IsString())
-                return res.AsString();
-
-
-            throw new InvalidOperationException("Wrong result: " + res.AsObject()?.GetType());
+            _compiler = _engine.Global.Get("transform") ?? throw new InvalidOperationException("Missing compiler");
         }
     }
 }

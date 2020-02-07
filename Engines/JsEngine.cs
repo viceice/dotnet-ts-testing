@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace dotnet_ts_testing.Engines
 {
-    abstract class JsEngine : IJsEngine
+    abstract class JsEngine : IJsEngine, IDisposable
     {
         public string Type { get; set; } = "tsc";
         public bool Minimize { get; set; } = false;
@@ -25,10 +25,12 @@ namespace dotnet_ts_testing.Engines
 
         private string Read(string file) => File.ReadAllText($"{file}");
 
+        protected virtual void Prepare() { }
 
 
         public void Test(string test)
         {
+            Console.WriteLine(string.Empty.PadLeft(40, '='));
             var expected = Read($"tests/{test}.js");
             var code = Read($"tests/{test}.ts");
 
@@ -38,31 +40,34 @@ namespace dotnet_ts_testing.Engines
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && !NonWindows)
             {
                 Console.WriteLine($"[{Engine}] not supported on platform: {RuntimeInformation.OSDescription}");
-                PrintLine();
                 return;
             }
             try
             {
-                var start = Stopwatch.StartNew();
-                var actual = Compile(code);
+                var sw = Stopwatch.StartNew();
 
+                Prepare();
+
+                Console.WriteLine($"[{Engine}] prepared in {sw.Elapsed}");
+                PrintLine();
+
+                sw.Restart();
+                var actual = Compile(code);
                 PrintLine();
 
                 if (actual != expected)
                 {
-                    Console.Error.WriteLine($"[{Engine}] Test {test} failed in {start.Elapsed}");
+                    Console.Error.WriteLine($"[{Engine}] Test {test} failed in {sw.Elapsed}");
                     PrintLine();
                     PrintDiff(expected, actual);
                 }
                 else
-                    Console.WriteLine($"[{Engine}] Test {test} succeeded in {start.Elapsed}");
+                    Console.WriteLine($"[{Engine}] Test {test} succeeded in {sw.Elapsed}");
             }
             catch (Exception ex)
             {
-                PrintLine();
                 Console.Error.WriteLine($"[{Engine}] Test {test} failed\n{ex}");
             }
-            PrintLine();
         }
 
         private static void PrintDiff(string expected, string actual)
@@ -102,9 +107,18 @@ namespace dotnet_ts_testing.Engines
             Console.ResetColor();
         }
 
-        private static void PrintLine()
+        private static void PrintLine() => Console.WriteLine(string.Empty.PadLeft(40, '-'));
+
+        #region IDisposable Support
+
+        protected virtual void Dispose(bool disposing)
         {
-            Console.WriteLine($"----------------------------------");
+
         }
+
+
+        public void Dispose() => Dispose(true);
+        #endregion
+
     }
 }

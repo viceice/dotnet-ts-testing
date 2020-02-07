@@ -5,23 +5,27 @@ namespace dotnet_ts_testing.Engines
 {
     class ChakraJsEngine : JsEngine
     {
+        private ChakraCoreJsEngine engine;
+
         protected override string Engine => "Chakra";
 
-        protected override string Compile(string code)
+        protected override string Compile(string code) => engine.CallFunction("transform", code) as string;
+
+        protected override void Prepare()
         {
-            using (var engine = new ChakraCoreJsEngine())
-            {
-                engine.EmbedHostObject("log", new Action<object>(Console.WriteLine));
-                engine.Execute("const window = this;");
-                engine.Execute("const exports = {};");
+            engine = new ChakraCoreJsEngine();
+            engine.EmbedHostObject("log", new Action<object>(Console.WriteLine));
+            engine.Execute("const window = this;");
+            engine.Execute("const exports = {};");
+            engine.Execute(Compiler);
+            if (!engine.HasVariable("transform"))
+                throw new InvalidOperationException("Missing compiler");
+        }
 
-                engine.Execute(Compiler);
-
-                var res = engine.CallFunction("transform", code);
-                if (res is string s)
-                    return s;
-                throw new InvalidOperationException("Wrong result: " + res?.GetType());
-            }
+        protected override void Dispose(bool disposing)
+        {
+            engine?.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

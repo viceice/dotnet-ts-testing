@@ -15,9 +15,12 @@ namespace dotnet_ts_testing
 
             foreach (var e in engines)
             {
-                e.Type = type;
-                e.Minimize = min;
-                e.Test("test");
+                using (e)
+                {
+                    e.Type = type;
+                    e.Minimize = min;
+                    e.Test("test");
+                }
             }
         }
     }
