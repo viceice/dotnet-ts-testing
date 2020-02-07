@@ -52,7 +52,14 @@ namespace dotnet_ts_testing.Engines
                 PrintLine();
 
                 sw.Restart();
-                var actual = Compile(code);
+                var actual = string.Empty;
+
+                for (int i = 0; i < 10; i++)
+                {
+                    actual = Compile(code);
+                    if (actual != expected)
+                        break;
+                }
                 PrintLine();
 
                 if (actual != expected)
