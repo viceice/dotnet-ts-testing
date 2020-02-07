@@ -1,5 +1,25 @@
 {
-  "extends": [
-    "config:base"
+   "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":automergeMinor",
+    ":label(ready)",
+    "group:linters",
+    ":masterIssue"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "at any time",
+    "stabilityDays": 0,
+    "masterIssueApproval": true
+  },
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "stabilityDays": 3,
+  "prCreation": "not-pending",
+  "packageRules": [
+    {
+      "updateTypes": ["major"],
+      "masterIssueApproval": true
+    }
   ]
 }
