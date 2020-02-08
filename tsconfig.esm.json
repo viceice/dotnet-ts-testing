@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "ES2015",
+    "types": []
+  },
+  "files": ["scripts/tsc.ts"],
+  "include": ["scripts/**/*.d.ts"]
+}

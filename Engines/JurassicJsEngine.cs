@@ -6,21 +6,24 @@ namespace dotnet_ts_testing.Engines
 {
     class JurassicJsEngine : JsEngine
     {
+        private ScriptEngine _engine;
+        private FunctionInstance _compiler;
+
         protected override string Engine => "Jurassic";
 
+        protected override string Compile(string code) => _compiler.Call(null, code)?.ToString();
 
-        protected override string Compile(string code)
+        protected override void Prepare()
         {
-            var engine = new ScriptEngine();
-            
-            engine.SetGlobalFunction("log", new Action<object>(Console.WriteLine));
-            engine.Global["window"] = engine.Global;
+            _engine = new ScriptEngine();
 
-            engine.Execute(Compiler);
+            _engine.SetGlobalFunction("log", new Action<object>(Console.WriteLine));
+            _engine.Global["window"] = _engine.Global;
+            _engine.Execute("var exports = {};");
 
-            var compiler = engine.Global[Type] as ObjectInstance;
+            _engine.Execute(Compiler);
 
-            return compiler.CallMemberFunction("transform", code) as string;
+            _compiler = _engine.Global["transform"] as FunctionInstance ?? throw new InvalidOperationException("Missing compiler");
         }
     }
 }

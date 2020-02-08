@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "webpack && tsc -p tests",
+    "build": "rollup -c && tsc -p tests",
     "build:tests": "tsc -p tests",
     "test": "yarn -s build && dotnet run"
   },
@@ -16,11 +16,13 @@
     "@babel/preset-env": "7.8.4",
     "@babel/preset-typescript": "7.8.3",
     "@babel/standalone": "7.8.4",
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "7.1.1",
+    "@rollup/plugin-typescript": "3.0.0",
     "@types/babel__standalone": "7.1.0",
-    "babel-loader": "8.0.6",
-    "typescript": "3.7.5",
-    "webpack": "4.41.5",
-    "webpack-cli": "3.3.10",
-    "webpack-merge": "4.2.2"
+    "rollup": "1.31.0",
+    "rollup-plugin-terser": "5.2.0",
+    "tslib": "1.10.0",
+    "typescript": "3.7.5"
   }
 }

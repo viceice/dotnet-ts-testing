@@ -11,13 +11,16 @@ namespace dotnet_ts_testing
             Console.WriteLine("dotnet ts converter");
             var type = "tsc";
             var min = args.Any(s => s == "--min" || s == "-m");
-            var engines = new IJsEngine[] { /*new JintJsEngine(), new JurassicJsEngine(),*/ new V8JsEngine(), new ChakraJsEngine(), new NilJsEngine() };
+            var engines = new IJsEngine[] { new JintJsEngine(), new JurassicJsEngine(), new V8JsEngine(), new ChakraJsEngine(), new NilJsEngine() };
 
             foreach (var e in engines)
             {
-                e.Type = type;
-                e.Minimize = min;
-                e.Test("test");
+                using (e)
+                {
+                    e.Type = type;
+                    e.Minimize = min;
+                    e.Test("test");
+                }
             }
         }
     }
