@@ -9,7 +9,7 @@
     <ItemGroup>
         <PackageReference Include="DiffPlex" Version="1.5.0" />
         <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore" Version="3.3.2" />
-        <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.linux-x64" Version="3.3.0" />
+        <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.linux-x64" Version="3.3.2" />
         <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.osx-x64" Version="3.3.0" />
         <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x64" Version="3.3.0" />
         <PackageReference Include="Jint" Version="3.0.0-beta-1632" />
