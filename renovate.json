@@ -22,7 +22,7 @@
       "masterIssueApproval": true
     },
     {
-      "packagePatterns": ["^JavaScriptEngineSwitcher\."],
+      "packagePatterns": ["^JavaScriptEngineSwitcher\\."],
       "groupName":"javascriptengineswitcher"
     }
   ]
