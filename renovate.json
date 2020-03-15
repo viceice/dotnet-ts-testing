@@ -20,6 +20,10 @@
     {
       "updateTypes": ["major"],
       "masterIssueApproval": true
+    },
+    {
+      "sorceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
+      "description":"JavaScriptEngineSwitcher monorepo"
     }
   ]
 }
