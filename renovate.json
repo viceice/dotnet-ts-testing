@@ -22,8 +22,8 @@
       "masterIssueApproval": true
     },
     {
-      "packagePatterns": ["^JavaScriptEngineSwitcher\\."],
-      "groupName":"javascriptengineswitcher"
+      "sorceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
+      "description":"JavaScriptEngineSwitcher monorepo"
     }
   ]
 }
