@@ -22,7 +22,7 @@
       "masterIssueApproval": true
     },
     {
-      "sorceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
+      "sourceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
       "description":"JavaScriptEngineSwitcher monorepo"
     }
   ]
