@@ -23,7 +23,7 @@
     },
     {
       "sourceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
-      "description":"JavaScriptEngineSwitcher monorepo"
+      "groupName":"JavaScriptEngineSwitcher monorepo"
     }
   ]
 }
