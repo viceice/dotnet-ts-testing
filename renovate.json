@@ -20,6 +20,10 @@
     {
       "updateTypes": ["major"],
       "masterIssueApproval": true
+    },
+    {
+      "packagePatterns": ["^JavaScriptEngineSwitcher\."],
+      "groupName":"javascriptengineswitcher"
     }
   ]
 }
