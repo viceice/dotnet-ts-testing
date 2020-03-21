@@ -793,10 +793,10 @@
   dependencies:
     estree-walker "^1.0.1"
 
-"@types/babel__standalone@7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@types/babel__standalone/-/babel__standalone-7.1.1.tgz#cc6059e8b4de9ac13c909a6ec1f5d7870c25c518"
-  integrity sha512-KS0gbGjeBhNtCq6dblbxfAUtWrdGyPZOktSAoD8/pBnupbC7NYg3N/Gp4Aw7BvBUcjJtp4rmXHU1UHAdxvky4g==
+"@types/babel__standalone@7.1.2":
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/@types/babel__standalone/-/babel__standalone-7.1.2.tgz#36fa55a51f1966688b0c7ce52524f14de0f3c309"
+  integrity sha512-a4gHAe/kNEgCnpc4HfIJHuyGDD/DI/62EFTt3dhvh/LtYdlPD4gUMgiwLoBIfv+Y+2vAfIwoZVrwwpDrwLhVXw==
   dependencies:
     "@babel/core" "^7.1.0"
 
