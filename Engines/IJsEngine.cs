@@ -6,6 +6,7 @@ namespace dotnet_ts_testing.Engines
     {
         string Type { get; set; }
         bool Minimize { get; set; }
+        bool Failed { get; }
 
         void Test(string test);
     }

@@ -12,6 +12,7 @@ namespace dotnet_ts_testing
             var type = "tsc";
             var min = args.Any(s => s == "--min" || s == "-m");
             var engines = new IJsEngine[] { new JintJsEngine(), new JurassicJsEngine(), new V8JsEngine(), new ChakraJsEngine(), new NilJsEngine() };
+            var failed = false;
 
             foreach (var e in engines)
             {
@@ -20,8 +21,12 @@ namespace dotnet_ts_testing
                     e.Type = type;
                     e.Minimize = min;
                     e.Test("test");
+
+                    failed |= e.Failed;
                 }
             }
+
+            if (failed) Environment.Exit(1);
         }
     }
 }

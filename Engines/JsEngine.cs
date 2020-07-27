@@ -13,6 +13,7 @@ namespace dotnet_ts_testing.Engines
     {
         public string Type { get; set; } = "tsc";
         public bool Minimize { get; set; } = false;
+        public bool Failed { get; set; } = true;
 
         protected abstract string Engine { get; }
 
@@ -69,7 +70,10 @@ namespace dotnet_ts_testing.Engines
                     PrintDiff(expected, actual);
                 }
                 else
+                {
                     Console.WriteLine($"[{Engine}] Test {test} succeeded in {sw.Elapsed}");
+                    Failed = false;
+                }
             }
             catch (Exception ex)
             {

@@ -19,9 +19,10 @@ namespace dotnet_ts_testing.Engines
             _engine = new Context
             {
                 { "exports", JSObject.CreateObject() },
-                { "log", JSValue.Marshal(new Action<object>(Console.WriteLine)) }
+                { "log", JSValue.Marshal(new Action<object>(Console.WriteLine)) },
             };
 
+            _engine.Eval("var globalThis = this;");
             _engine.Eval(Compiler, false);
             _compiler = _engine.Eval("exports.transform").As<ICallable>() ?? throw new InvalidOperationException("Missing compiler");
         }
