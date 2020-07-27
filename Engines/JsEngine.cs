@@ -41,6 +41,7 @@ namespace dotnet_ts_testing.Engines
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && !NonWindows)
             {
                 Console.WriteLine($"[{Engine}] not supported on platform: {RuntimeInformation.OSDescription}");
+                Failed = false;
                 return;
             }
             try
