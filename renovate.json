@@ -24,6 +24,10 @@
     {
       "sourceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
       "groupName":"JavaScriptEngineSwitcher monorepo"
+    },
+    {
+      "sourceUrlPrefixes": ["https://github.com/rollup/rollup", "https://github.com/rollup/plugins"],
+      "groupName":"rollup monorepo"
     }
   ]
 }
