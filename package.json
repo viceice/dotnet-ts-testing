@@ -22,7 +22,7 @@
     "@types/babel__standalone": "7.1.2",
     "rollup": "2.23.0",
     "rollup-plugin-terser": "6.1.0",
-    "tslib": "2.0.0",
+    "tslib": "2.0.1",
     "typescript": "3.9.7"
   }
 }
