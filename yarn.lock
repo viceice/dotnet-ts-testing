@@ -903,10 +903,10 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@types/babel__standalone@7.1.2":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@types/babel__standalone/-/babel__standalone-7.1.2.tgz#36fa55a51f1966688b0c7ce52524f14de0f3c309"
-  integrity sha512-a4gHAe/kNEgCnpc4HfIJHuyGDD/DI/62EFTt3dhvh/LtYdlPD4gUMgiwLoBIfv+Y+2vAfIwoZVrwwpDrwLhVXw==
+"@types/babel__standalone@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@types/babel__standalone/-/babel__standalone-7.1.3.tgz#e275639469c056f7cecc4963c88a803f028236dd"
+  integrity sha512-gj2Uvh8NT7+/0liAKMBtAqWspdg1LGZ471AD9Rdvrg1mB0q45qnl21dQPGz/ZtMYRgem0Aj/CUVQYHP3QDb5Gw==
   dependencies:
     "@babel/core" "^7.1.0"
 
