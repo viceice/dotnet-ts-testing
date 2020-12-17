@@ -3,7 +3,6 @@
     "visualon/renovate-config",
     "group:linters"
   ],
-  "stabilityDays": 3,
   "packageRules": [
     {
       "updateTypes": ["minor"],
