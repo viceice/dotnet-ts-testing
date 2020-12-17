@@ -1,7 +1,6 @@
 {
    "extends": [
     "visualon/renovate-config",
-    ":rebaseStalePrs",
     "group:linters"
   ],
   "stabilityDays": 3,
