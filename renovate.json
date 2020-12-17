@@ -1,25 +1,14 @@
 {
    "extends": [
-    "config:base",
+    "visualon/renovate-config",
     ":rebaseStalePrs",
-    ":automergeMinor",
-    ":label(ready)",
-    "group:linters",
-    ":masterIssue"
+    "group:linters"
   ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": "at any time",
-    "stabilityDays": 0,
-    "masterIssueApproval": true
-  },
-  "postUpdateOptions": ["yarnDedupeHighest"],
   "stabilityDays": 3,
-  "prCreation": "not-pending",
   "packageRules": [
     {
-      "updateTypes": ["major"],
-      "masterIssueApproval": true
+      "updateTypes": ["minor"],
+      "dependencyDashboardApproval": false
     },
     {
       "sourceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
