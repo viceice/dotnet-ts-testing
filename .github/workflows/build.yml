@@ -14,7 +14,7 @@ jobs:
         dotnet-version: [3.1.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
       
     - name: Setup .NET Core ${{ matrix.dotnet-version }}
       uses: actions/setup-dotnet@v1.7.2
