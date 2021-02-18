@@ -12,10 +12,10 @@
     "test": "yarn -s build && dotnet run"
   },
   "devDependencies": {
-    "@babel/core": "7.12.13",
-    "@babel/preset-env": "7.12.13",
-    "@babel/preset-typescript": "7.12.13",
-    "@babel/standalone": "7.12.15",
+    "@babel/core": "7.12.16",
+    "@babel/preset-env": "7.12.16",
+    "@babel/preset-typescript": "7.12.16",
+    "@babel/standalone": "7.12.16",
     "@rollup/plugin-commonjs": "17.1.0",
     "@rollup/plugin-node-resolve": "11.2.0",
     "@rollup/plugin-typescript": "8.2.0",
