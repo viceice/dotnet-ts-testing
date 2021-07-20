@@ -23,3 +23,6 @@ indent_size = 2
 
 [*.{cmd,bat}]
 end_of_line = crlf
+
+[*.cs]
+indent_size = 4
