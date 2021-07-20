@@ -11,7 +11,7 @@ namespace dotnet_ts_testing.Engines
         protected override string Engine => "V8";
 
 
-        protected override bool NonWindows => false;
+        // protected override bool NonWindows => false;
 
         protected override string Compile(string code) => _compiler(code);
 
