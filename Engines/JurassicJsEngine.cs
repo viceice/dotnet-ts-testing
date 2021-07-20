@@ -1,4 +1,4 @@
-﻿using Jurassic;
+using Jurassic;
 using Jurassic.Library;
 using System;
 
@@ -11,11 +11,14 @@ namespace dotnet_ts_testing.Engines
 
         protected override string Engine => "Jurassic";
 
-        protected override string Compile(string code) => _compiler.Call(null, code)?.ToString();
+        protected override string Compile(string code) => _compiler.Call(_engine.Global, code)?.ToString();
 
         protected override void Prepare()
         {
-            _engine = new ScriptEngine();
+            _engine = new ScriptEngine
+            {
+                ForceStrictMode = true,
+            };
 
             _engine.SetGlobalFunction("log", new Action<object>(Console.WriteLine));
             _engine.Global["window"] = _engine.Global;
