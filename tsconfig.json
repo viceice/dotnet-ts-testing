@@ -7,7 +7,7 @@
     "strict": false,
     "lib": ["ES2015"],
     "isolatedModules": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "newLine": "LF"
   },
 }
