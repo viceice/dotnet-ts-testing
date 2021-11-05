@@ -11,8 +11,7 @@ namespace dotnet_ts_testing.Engines
 
         protected override string Engine => "Jint";
 
-
-        protected override string Compile(string code) => _compiler.Invoke(code).AsString();
+        protected override string Compile(string code) => _engine.Invoke(_compiler, code).AsString();
 
         protected override void Prepare()
         {
