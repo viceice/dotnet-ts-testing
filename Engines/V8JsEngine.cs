@@ -1,4 +1,4 @@
-﻿using Microsoft.ClearScript.V8;
+using Microsoft.ClearScript.V8;
 using System;
 
 namespace dotnet_ts_testing.Engines

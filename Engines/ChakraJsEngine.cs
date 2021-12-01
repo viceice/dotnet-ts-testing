@@ -1,4 +1,4 @@
-﻿using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.ChakraCore;
 using System;
 
 namespace dotnet_ts_testing.Engines
