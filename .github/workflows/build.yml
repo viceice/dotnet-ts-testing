@@ -27,7 +27,7 @@ jobs:
           cache: 'yarn'
 
       - name: Setup .NET ${{ matrix.dotnet-version }}
-        uses: actions/setup-dotnet@608ee757cfcce72c2e91e99aca128e0cae67de87 # tag=v1.9.1
+        uses: actions/setup-dotnet@9211491ffb35dd6a6657ca4f45d43dfe6e97c829 # tag=v2.0.0
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
 
