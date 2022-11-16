@@ -1,7 +1,6 @@
 {
   "name": "dotnet-ts-testing",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/ViceIce/dotnet-ts-testing.git",
   "author": "Michael Kriese <michael.kriese@visualon.de>",
   "license": "MIT",
