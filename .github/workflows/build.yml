@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   build:
-    name: ${{ matrix.node-version == 16 && format('test ({0})', matrix.os) || format('test ({0}, node-{1})', matrix.os, matrix.node-version) }}
+    name: ${{ matrix.node-version == 16 && format('build ({0})', matrix.os) || format('build ({0}, node-{1})', matrix.os, matrix.node-version) }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 15
 
