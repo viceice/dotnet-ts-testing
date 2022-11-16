@@ -19,7 +19,6 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         node-version: [14, 16, 18]
-        dotnet-version: [6.0.x]
 
     steps:
       - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3.1.0
@@ -33,7 +32,7 @@ jobs:
       - name: Setup .NET ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@a351d9ea84bc76ec7508debf02a39d88f8b6c0c0 # tag=v2.1.1
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-version: 6.0.x
 
       - name: restore packages
         run: |
