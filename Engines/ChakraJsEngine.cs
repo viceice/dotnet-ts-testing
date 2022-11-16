@@ -15,7 +15,7 @@ namespace dotnet_ts_testing.Engines
         {
             engine = new ChakraCoreJsEngine();
             engine.EmbedHostObject("log", new Action<object>(Console.WriteLine));
-            engine.Execute("const window = this;");
+            engine.Execute("const global = this;");
             engine.Execute("const exports = {};");
             engine.Execute(Compiler);
             if (!engine.HasVariable("transform"))

@@ -21,12 +21,13 @@ namespace dotnet_ts_testing.Engines
             };
 
             _engine.SetGlobalFunction("log", new Action<object>(Console.WriteLine));
-            _engine.Global["window"] = _engine.Global;
+            _engine.Execute("var global = this;");
             _engine.Execute("var exports = {};");
 
             _engine.Execute(Compiler);
 
-            _compiler = _engine.Global["transform"] as FunctionInstance ?? throw new InvalidOperationException("Missing compiler");
+
+            _compiler = _engine.Evaluate("exports.transform") as FunctionInstance ?? throw new InvalidOperationException("Missing compiler");
         }
     }
 }
