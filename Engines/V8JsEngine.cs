@@ -19,7 +19,7 @@ namespace dotnet_ts_testing.Engines
         {
             _engine = new V8ScriptEngine();
             _engine.AddHostObject("log", new Action<object>(Console.WriteLine));
-            _engine.Execute("const window = this;");
+            _engine.Execute("const global = this;");
             _engine.Execute("const exports = {};");
             _engine.Execute(Compiler);
             _compiler = _engine.Script.transform ?? throw new InvalidOperationException("Missing compiler");

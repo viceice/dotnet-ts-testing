@@ -18,12 +18,12 @@ namespace dotnet_ts_testing.Engines
         {
             _engine = new Engine(SetOptions)
                             .SetValue("log", new Action<object>(Console.WriteLine));
-            _engine.Realm.GlobalObject.FastSetProperty("window", new PropertyDescriptor(_engine.Realm.GlobalObject, false, false, false));
-            _engine.Realm.GlobalObject.FastSetProperty("exports", new PropertyDescriptor(_engine.Realm.GlobalObject, false, false, false));
+            _engine.Execute("const global = this;");
+            _engine.Execute("const exports = {};");
 
             _engine.Execute(Compiler);
 
-            _compiler = _engine.Realm.GlobalObject.Get("transform") ?? throw new InvalidOperationException("Missing compiler");
+            _compiler = _engine.Evaluate("exports.transform") ?? throw new InvalidOperationException("Missing compiler");
         }
 
         private void SetOptions(Options opt)

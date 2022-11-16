@@ -1,4 +1,4 @@
-﻿using NiL.JS.Core;
+using NiL.JS.Core;
 using NiL.JS.Extensions;
 using System;
 
@@ -18,11 +18,12 @@ namespace dotnet_ts_testing.Engines
         {
             _engine = new Context
             {
-                { "exports", JSObject.CreateObject() },
                 { "log", JSValue.Marshal(new Action<object>(Console.WriteLine)) },
             };
 
-            _engine.Eval("var globalThis = this;");
+            _engine.Eval("const window = this;", true);
+            _engine.Eval("const global = this;", true);
+            _engine.Eval("const exports = {};", true);
             _engine.Eval(Compiler, false);
             _compiler = _engine.Eval("exports.transform").As<ICallable>() ?? throw new InvalidOperationException("Missing compiler");
         }
