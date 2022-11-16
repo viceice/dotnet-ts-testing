@@ -1,5 +1,6 @@
 using Jint;
 using Jint.Native;
+using Jint.Runtime.Descriptors;
 using System;
 
 namespace dotnet_ts_testing.Engines
@@ -17,8 +18,8 @@ namespace dotnet_ts_testing.Engines
         {
             _engine = new Engine(SetOptions)
                             .SetValue("log", new Action<object>(Console.WriteLine));
-            _engine.Realm.GlobalObject.FastAddProperty("window", _engine.Realm.GlobalObject, false, false, false);
-            _engine.Realm.GlobalObject.FastAddProperty("exports", _engine.Realm.GlobalObject, false, false, false);
+            _engine.Realm.GlobalObject.FastSetProperty("window", new PropertyDescriptor(_engine.Realm.GlobalObject, false, false, false));
+            _engine.Realm.GlobalObject.FastSetProperty("exports", new PropertyDescriptor(_engine.Realm.GlobalObject, false, false, false));
 
             _engine.Execute(Compiler);
 
