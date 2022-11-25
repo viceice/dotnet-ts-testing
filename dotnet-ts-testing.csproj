@@ -12,7 +12,7 @@
         <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.linux-x64" Version="3.20.6" />
         <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.osx-x64" Version="3.20.6" />
         <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x64" Version="3.20.6" />
-        <PackageReference Include="Jint" Version="3.0.0-beta-2043" />
+        <PackageReference Include="Jint" Version="3.0.0-beta-2044" />
         <PackageReference Include="Jurassic" Version="3.2.6" />
         <PackageReference Include="Microsoft.ClearScript" Version="7.3.5" />
         <PackageReference Include="Microsoft.ClearScript.osx-x64" Version="7.3.5" />
