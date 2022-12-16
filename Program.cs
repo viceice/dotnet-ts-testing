@@ -11,7 +11,7 @@ namespace dotnet_ts_testing
             Console.WriteLine("dotnet ts converter");
             var type = "tsc";
             var min = args.Any(s => s == "--min" || s == "-m");
-            var engines = new IJsEngine[] { new JintJsEngine(), new JurassicJsEngine(), new V8JsEngine(), new ChakraJsEngine(), new NilJsEngine() };
+            var engines = new IJsEngine[] { new JintJsEngine(), new JurassicJsEngine(), new V8JsEngine(), new NilJsEngine() };
             var failed = false;
 
             foreach (var e in engines)
