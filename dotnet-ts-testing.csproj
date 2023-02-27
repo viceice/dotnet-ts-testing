@@ -13,7 +13,7 @@
         <PackageReference Include="Microsoft.ClearScript" Version="7.3.7" />
         <PackageReference Include="Microsoft.ClearScript.osx-x64" Version="7.3.7" />
         <PackageReference Include="Microsoft.ClearScript.linux-x64" Version="7.3.7" />
-        <PackageReference Include="NiL.JS" Version="2.5.1631" />
+        <PackageReference Include="NiL.JS" Version="2.5.1632" />
     </ItemGroup>
 
     <ItemGroup>
