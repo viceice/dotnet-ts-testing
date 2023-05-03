@@ -19,7 +19,7 @@
     "@rollup/plugin-node-resolve": "15.0.2",
     "@rollup/plugin-typescript": "11.1.0",
     "@types/babel__standalone": "7.1.4",
-    "rollup": "3.21.2",
+    "rollup": "3.21.4",
     "rollup-plugin-polyfill-node": "0.12.0",
     "rollup-plugin-terser": "7.0.2",
     "tslib": "2.5.0",
