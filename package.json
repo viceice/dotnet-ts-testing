@@ -22,7 +22,7 @@
     "rollup": "3.25.3",
     "rollup-plugin-polyfill-node": "0.12.0",
     "rollup-plugin-terser": "7.0.2",
-    "tslib": "2.5.3",
+    "tslib": "2.6.0",
     "typescript": "4.9.5"
   }
 }
