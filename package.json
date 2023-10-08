@@ -16,7 +16,7 @@
     "@babel/preset-typescript": "7.23.0",
     "@babel/standalone": "7.23.1",
     "@rollup/plugin-commonjs": "24.1.0",
-    "@rollup/plugin-node-resolve": "15.2.2",
+    "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-typescript": "11.1.5",
     "@types/babel__standalone": "7.1.5",
     "rollup": "3.29.4",
