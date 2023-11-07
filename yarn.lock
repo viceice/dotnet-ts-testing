@@ -1082,10 +1082,10 @@
   dependencies:
     "@babel/types" "^7.0.0"
 
-"@types/babel__standalone@7.1.6":
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/@types/babel__standalone/-/babel__standalone-7.1.6.tgz#c02c8cd27280fac4a9781c23860039dbdc01f192"
-  integrity sha512-JRVq2H02irW6GDxkHepsdZVjor87SZo4eDsxoBtSbswf7HWtVYNxCmJDBkJbFNFWGOuzsxATZV8xZ2PI9sBiIw==
+"@types/babel__standalone@7.1.7":
+  version "7.1.7"
+  resolved "https://registry.yarnpkg.com/@types/babel__standalone/-/babel__standalone-7.1.7.tgz#8ab09548a24f54015e7d84a55486148180bc4ace"
+  integrity sha512-4RUJX9nWrP/emaZDzxo/+RYW8zzLJTXWJyp2k78HufG459HCz754hhmSymt3VFOU6/Wy+IZqfPvToHfLuGOr7w==
   dependencies:
     "@types/babel__core" "^7.1.0"
 
