@@ -29,19 +29,5 @@
   "engines": {
     "node": ">=20.9.0",
     "pnpm": "^8.0.0"
-  },
-  "pnpm": {
-    "supportedArchitectures": {
-      "os": [
-        "win32",
-        "linux"
-      ],
-      "cpu": [
-        "x64"
-      ],
-      "libc": [
-        "glibc"
-      ]
-    }
   }
 }

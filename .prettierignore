@@ -4,3 +4,5 @@ bin/
 .vs/
 pnpm-lock.yaml
 .pnpm-store/
+scripts/*.js
+test/*.js
