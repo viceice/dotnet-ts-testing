@@ -18,7 +18,7 @@ namespace dotnet_ts_testing.Engines
         {
             _engine = new Context
             {
-                { "log", JSValue.Marshal(new Action<object>(Console.WriteLine)) },
+                { "log", Context.CurrentGlobalContext.ProxyValue(new Action<object>(Console.WriteLine)) },
             };
 
             _engine.Eval("const window = this;", true);
