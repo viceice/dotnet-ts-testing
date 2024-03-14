@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig",
   "compilerOptions": {
-    "target": "ES5",
     "types": []
   },
   "files": ["scripts/tsc.ts"],
