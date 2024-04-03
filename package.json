@@ -11,10 +11,10 @@
     "test": "pnpm build && dotnet run"
   },
   "devDependencies": {
-    "@babel/core": "7.24.3",
-    "@babel/preset-env": "7.24.3",
+    "@babel/core": "7.24.4",
+    "@babel/preset-env": "7.24.4",
     "@babel/preset-typescript": "7.24.1",
-    "@babel/standalone": "7.24.3",
+    "@babel/standalone": "7.24.4",
     "@rollup/plugin-commonjs": "25.0.7",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-terser": "0.4.4",
