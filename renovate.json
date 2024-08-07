@@ -1,24 +1,21 @@
 {
-   "extends": [
-    "visualon/renovate-config",
-    "group:linters"
-  ],
+  "extends": ["visualon/renovate-config", "group:linters"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor"],
       "dependencyDashboardApproval": false
     },
     {
-      "matchSourceUrlPrefixes": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher"],
-      "groupName":"javascriptengineswitcher monorepo"
+      "groupName": "javascriptengineswitcher monorepo",
+      "matchSourceUrls": ["https://github.com/Taritsyn/JavaScriptEngineSwitcher{/,}**"]
     },
     {
-      "matchSourceUrlPrefixes": [
-         "https://github.com/rollup/rollup",
-         "https://github.com/rollup/plugins",
-         "https://github.com/TrySound/rollup-plugin-terser"
-      ],
-      "groupName":"rollup monorepo"
+      "groupName": "rollup monorepo",
+      "matchSourceUrls": [
+        "https://github.com/rollup/rollup{/,}**",
+        "https://github.com/rollup/plugins{/,}**",
+        "https://github.com/TrySound/rollup-plugin-terser{/,}**"
+      ]
     }
   ]
 }
