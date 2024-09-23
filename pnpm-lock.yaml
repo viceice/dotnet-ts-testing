@@ -24,8 +24,8 @@ importers:
         specifier: 25.0.8
         version: 25.0.8(rollup@4.22.4)
       '@rollup/plugin-node-resolve':
-        specifier: 15.2.3
-        version: 15.2.3(rollup@4.22.4)
+        specifier: 15.2.4
+        version: 15.2.4(rollup@4.22.4)
       '@rollup/plugin-terser':
         specifier: 0.4.4
         version: 0.4.4(rollup@4.22.4)
@@ -693,8 +693,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/plugin-node-resolve@15.2.3':
-    resolution: {integrity: sha512-j/lym8nf5E21LwBT4Df1VD6hRO2L2iwUeUmP7litikRsVp1H6NWx20NEp0Y7su+7XGc476GnXXc4kFeZNGmaSQ==}
+  '@rollup/plugin-node-resolve@15.2.4':
+    resolution: {integrity: sha512-wnKAGisav1m2vgVK2/2mNowK5DCqff7kpz76cY1pECVE0qRQTCAIcWP5xmdGDi8X8K9SYeeC98i6cD3fk6qkDg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.78.0||^3.0.0||^4.0.0
@@ -872,10 +872,6 @@ packages:
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
 
-  builtin-modules@3.3.0:
-    resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
-    engines: {node: '>=6'}
-
   caniuse-lite@1.0.30001660:
     resolution: {integrity: sha512-GacvNTTuATm26qC74pt+ad1fW15mlQ/zuTzzY1ZoIzECTP8HURDfF43kNxPgf7H1jmelCBQTTbBNxdSXOA7Bqg==}
 
@@ -970,10 +966,6 @@ packages:
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
-
-  is-builtin-module@3.2.1:
-    resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==}
-    engines: {node: '>=6'}
 
   is-core-module@2.15.1:
     resolution: {integrity: sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==}
@@ -1988,12 +1980,11 @@ snapshots:
     optionalDependencies:
       rollup: 4.22.4
 
-  '@rollup/plugin-node-resolve@15.2.3(rollup@4.22.4)':
+  '@rollup/plugin-node-resolve@15.2.4(rollup@4.22.4)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.22.4)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
-      is-builtin-module: 3.2.1
       is-module: 1.0.0
       resolve: 1.22.8
     optionalDependencies:
@@ -2146,8 +2137,6 @@ snapshots:
 
   buffer-from@1.1.2: {}
 
-  builtin-modules@3.3.0: {}
-
   caniuse-lite@1.0.30001660: {}
 
   chalk@2.4.2:
@@ -2219,10 +2208,6 @@ snapshots:
       wrappy: 1.0.2
 
   inherits@2.0.4: {}
-
-  is-builtin-module@3.2.1:
-    dependencies:
-      builtin-modules: 3.3.0
 
   is-core-module@2.15.1:
     dependencies:
