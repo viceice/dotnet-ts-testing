@@ -724,8 +724,8 @@ packages:
       tslib:
         optional: true
 
-  '@rollup/pluginutils@5.1.0':
-    resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
+  '@rollup/pluginutils@5.1.2':
+    resolution: {integrity: sha512-/FIdS3PyZ39bjZlwqFnWqCOVnW7o963LtKMwQOD0NhQqw22gSr2YY1afu3FxRip4ZCZNsD5jq6Aaz6QV3D/Njw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -864,16 +864,16 @@ packages:
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
 
-  browserslist@4.23.3:
-    resolution: {integrity: sha512-btwCFJVjI4YWDNfau8RhZ+B1Q/VLoUITrm3RlP6y1tYGWIOa+InuYiRGXUBXo8nA1qKmHMyLB/iVQg5TT4eFoA==}
+  browserslist@4.24.0:
+    resolution: {integrity: sha512-Rmb62sR1Zpjql25eSanFGEhAxcFwfA1K0GuQcLoaJBAcENegrQut3hYdhXFF1obQfiDyqIW/cLM5HSJ/9k884A==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
 
-  caniuse-lite@1.0.30001660:
-    resolution: {integrity: sha512-GacvNTTuATm26qC74pt+ad1fW15mlQ/zuTzzY1ZoIzECTP8HURDfF43kNxPgf7H1jmelCBQTTbBNxdSXOA7Bqg==}
+  caniuse-lite@1.0.30001664:
+    resolution: {integrity: sha512-AmE7k4dXiNKQipgn7a2xg558IRqPN3jMQY/rOsbxDhrd0tyChwbITBfiwtnqz8bi2M5mIWbxAYBvk7W7QBUS2g==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -910,8 +910,8 @@ packages:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
 
-  electron-to-chromium@1.5.23:
-    resolution: {integrity: sha512-mBhODedOXg4v5QWwl21DjM5amzjmI1zw9EPrPK/5Wx7C8jt33bpZNrC7OhHUG3pxRtbLpr3W2dXT+Ph1SsfRZA==}
+  electron-to-chromium@1.5.29:
+    resolution: {integrity: sha512-PF8n2AlIhCKXQ+gTpiJi0VhcHDb69kYX4MtCiivctc2QD3XuNZ/XIOlbGzt7WAjjEev0TtaH6Cu3arZExm5DOw==}
 
   escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
@@ -1092,8 +1092,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  terser@5.32.0:
-    resolution: {integrity: sha512-v3Gtw3IzpBJ0ugkxEX8U0W6+TnPKRRCWGh1jC/iM/e3Ki5+qvO1L1EAZ56bZasc64aXHwRHNIQEzm6//i5cemQ==}
+  terser@5.34.1:
+    resolution: {integrity: sha512-FsJZ7iZLd/BXkz+4xrRTGJ26o/6VTjQytUk8b8OxkwcD2I+79VPJlz7qss1+zE7h8GNIScFqXcDyJ/KqBYZFVA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1125,8 +1125,8 @@ packages:
     resolution: {integrity: sha512-6t3foTQI9qne+OZoVQB/8x8rk2k1eVy1gRXhV3oFQ5T6R1dqQ1xtin3XqSlx3+ATBkliTaR/hHyJBm+LVPNM8w==}
     engines: {node: '>=4'}
 
-  update-browserslist-db@1.1.0:
-    resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==}
+  update-browserslist-db@1.1.1:
+    resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -1193,7 +1193,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.25.4
       '@babel/helper-validator-option': 7.24.8
-      browserslist: 4.23.3
+      browserslist: 4.24.0
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -1963,7 +1963,7 @@ snapshots:
 
   '@rollup/plugin-commonjs@25.0.8(rollup@4.22.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+      '@rollup/pluginutils': 5.1.2(rollup@4.22.5)
       commondir: 1.0.1
       estree-walker: 2.0.2
       glob: 8.1.0
@@ -1974,7 +1974,7 @@ snapshots:
 
   '@rollup/plugin-inject@5.0.5(rollup@4.22.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+      '@rollup/pluginutils': 5.1.2(rollup@4.22.5)
       estree-walker: 2.0.2
       magic-string: 0.30.11
     optionalDependencies:
@@ -1982,7 +1982,7 @@ snapshots:
 
   '@rollup/plugin-node-resolve@15.3.0(rollup@4.22.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+      '@rollup/pluginutils': 5.1.2(rollup@4.22.5)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
       is-module: 1.0.0
@@ -1994,20 +1994,20 @@ snapshots:
     dependencies:
       serialize-javascript: 6.0.2
       smob: 1.5.0
-      terser: 5.32.0
+      terser: 5.34.1
     optionalDependencies:
       rollup: 4.22.5
 
   '@rollup/plugin-typescript@11.1.6(rollup@4.22.5)(tslib@2.7.0)(typescript@4.9.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
+      '@rollup/pluginutils': 5.1.2(rollup@4.22.5)
       resolve: 1.22.8
       typescript: 4.9.5
     optionalDependencies:
       rollup: 4.22.5
       tslib: 2.7.0
 
-  '@rollup/pluginutils@5.1.0(rollup@4.22.5)':
+  '@rollup/pluginutils@5.1.2(rollup@4.22.5)':
     dependencies:
       '@types/estree': 1.0.6
       estree-walker: 2.0.2
@@ -2128,16 +2128,16 @@ snapshots:
     dependencies:
       balanced-match: 1.0.2
 
-  browserslist@4.23.3:
+  browserslist@4.24.0:
     dependencies:
-      caniuse-lite: 1.0.30001660
-      electron-to-chromium: 1.5.23
+      caniuse-lite: 1.0.30001664
+      electron-to-chromium: 1.5.29
       node-releases: 2.0.18
-      update-browserslist-db: 1.1.0(browserslist@4.23.3)
+      update-browserslist-db: 1.1.1(browserslist@4.24.0)
 
   buffer-from@1.1.2: {}
 
-  caniuse-lite@1.0.30001660: {}
+  caniuse-lite@1.0.30001664: {}
 
   chalk@2.4.2:
     dependencies:
@@ -2159,7 +2159,7 @@ snapshots:
 
   core-js-compat@3.38.1:
     dependencies:
-      browserslist: 4.23.3
+      browserslist: 4.24.0
 
   debug@4.3.7:
     dependencies:
@@ -2167,7 +2167,7 @@ snapshots:
 
   deepmerge@4.3.1: {}
 
-  electron-to-chromium@1.5.23: {}
+  electron-to-chromium@1.5.29: {}
 
   escalade@3.2.0: {}
 
@@ -2340,7 +2340,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  terser@5.32.0:
+  terser@5.34.1:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.12.1
@@ -2364,9 +2364,9 @@ snapshots:
 
   unicode-property-aliases-ecmascript@2.1.0: {}
 
-  update-browserslist-db@1.1.0(browserslist@4.23.3):
+  update-browserslist-db@1.1.1(browserslist@4.24.0):
     dependencies:
-      browserslist: 4.23.3
+      browserslist: 4.24.0
       escalade: 3.2.0
       picocolors: 1.1.0
 
