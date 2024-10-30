@@ -18,8 +18,8 @@ importers:
         specifier: 7.26.0
         version: 7.26.0(@babel/core@7.26.0)
       '@babel/standalone':
-        specifier: 7.26.1
-        version: 7.26.1
+        specifier: 7.26.2
+        version: 7.26.2
       '@rollup/plugin-commonjs':
         specifier: 25.0.8
         version: 25.0.8(rollup@4.24.3)
@@ -559,8 +559,8 @@ packages:
     resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/standalone@7.26.1':
-    resolution: {integrity: sha512-DAC3Vv62IA9VcMMAsTm5UzuEmsVjYkR5A9BX9zJrrrPHCQYJIp38jMHHx17RC4KwruwiIAb5hLFZLmE+wZgiyQ==}
+  '@babel/standalone@7.26.2':
+    resolution: {integrity: sha512-i2VbegsRfwa9yq3xmfDX3tG2yh9K0cCqwpSyVG2nPxifh0EOnucAZUeO/g4lW2Zfg03aPJNtPfxQbDHzXc7H+w==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.25.9':
@@ -1710,7 +1710,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@babel/standalone@7.26.1': {}
+  '@babel/standalone@7.26.2': {}
 
   '@babel/template@7.25.9':
     dependencies:
