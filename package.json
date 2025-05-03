@@ -11,8 +11,8 @@
     "test": "pnpm build && dotnet run"
   },
   "devDependencies": {
-    "@babel/core": "7.26.10",
-    "@babel/preset-env": "7.26.9",
+    "@babel/core": "7.27.1",
+    "@babel/preset-env": "7.27.1",
     "@babel/preset-typescript": "7.27.1",
     "@babel/standalone": "7.27.1",
     "@rollup/plugin-commonjs": "25.0.8",
