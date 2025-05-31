@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="DiffPlex" Version="1.7.2" />
+        <PackageReference Include="DiffPlex" Version="1.8.0" />
         <PackageReference Include="Jint" Version="3.1.6" />
         <PackageReference Include="Jurassic" Version="3.2.9" />
         <PackageReference Include="Microsoft.ClearScript" Version="7.5.0" />
