@@ -18,8 +18,8 @@ importers:
         specifier: 7.27.1
         version: 7.27.1(@babel/core@7.27.4)
       '@babel/standalone':
-        specifier: 7.27.4
-        version: 7.27.4
+        specifier: 7.27.5
+        version: 7.27.5
       '@rollup/plugin-commonjs':
         specifier: 25.0.8
         version: 25.0.8(rollup@4.41.1)
@@ -547,8 +547,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/standalone@7.27.4':
-    resolution: {integrity: sha512-vFUF+yFDDyR3+ZUOvYeLMLb6Vl1l6LCvp61/0kMzRyB3Z6ljPz5rxbmsFVBZcm6Mvu9QyaZuJQIXYZ/DA20MfQ==}
+  '@babel/standalone@7.27.5':
+    resolution: {integrity: sha512-AvoXdFyKqvcxS0pMMs4dNl3hOYUkhTCF4P7aEwLXN1ED5ekxxjVWeFtr4ZVUGO0Y7u5d5H3nOyO8Y0CS/EBXPA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
@@ -1686,7 +1686,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/standalone@7.27.4': {}
+  '@babel/standalone@7.27.5': {}
 
   '@babel/template@7.27.2':
     dependencies:
